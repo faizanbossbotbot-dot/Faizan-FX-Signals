@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Faizan FX Signals</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+<h1>📈 Faizan FX Signals</h1>
+
+<div class="card">
+<h2>Forex Signal Generator</h2>
+
+<select id="pair">
+<option>EUR/USD</option>
+<option>GBP/USD</option>
+<option>USD/JPY</option>
+<option>XAU/USD (Gold)</option>
+</select>
+
+<select id="time">
+<option>1 Minute</option>
+<option>5 Minutes</option>
+<option>15 Minutes</option>
+<option>1 Hour</option>
+</select>
+
+<button onclick="generateSignal()">Generate Signal</button>
+
+<h2 id="signal">Waiting...</h2>
+<p id="confidence"></p>
+
+</div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
