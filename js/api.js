@@ -16,7 +16,6 @@ function updateCandle(price) {
   }
 
   last.close = price;
-
   if (price > last.high) last.high = price;
   if (price < last.low) last.low = price;
 }
@@ -34,6 +33,10 @@ socket.onmessage = (event) => {
   if (prices.length > 100) prices.shift();
 
   updateCandle(livePrice);
+
+  document.getElementById("marketPrice").innerText =
+    "📈 Live Price: " + livePrice.toFixed(2);
+};
 
   document.getElementById("marketPrice").innerText =
     "📈 Live Price: " + livePrice.toFixed(2);
