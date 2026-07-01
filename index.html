@@ -53,17 +53,17 @@ Market Open
 <h2>Forex Signal Generator</h2>
 
 <select id="pair">
-<option>EUR/USD</option>
-<option>GBP/USD</option>
-<option>USD/JPY</option>
-<option>XAU/USD (Gold)</option>
+<option>EUR/USD OTC</option>
+<option>GBP/USD OTC</option>
+<option>USD/JPY OTC</option>
+<option>XAU/USD OTC</option>
+<option>BTC/USD OTC</option>
 </select>
 
 <select id="time">
+<option>30 Seconds</option>
 <option>1 Minute</option>
 <option>5 Minutes</option>
-<option>15 Minutes</option>
-<option>1 Hour</option>
 </select>
 
 <button onclick="generateSignal()">Generate Signal</button>
@@ -78,18 +78,20 @@ Market Open
 </div>
 
 <div class="info-box">
-<span>💰 Entry</span>
-<strong id="entry">----</strong>
+<div class="info-box">
+<span>⏱ Expiry</span>
+<strong id="entry">1 Minute</strong>
 </div>
 
 <div class="info-box">
-<span>🛑 Stop Loss</span>
-<strong id="sl">----</strong>
+<span>📊 Asset</span>
+<strong id="asset">EUR/USD OTC</strong>
 </div>
 
 <div class="info-box">
-<span>🎯 Take Profit</span>
-<strong id="tp">----</strong>
+<span>🔥 Strength</span>
+<strong id="strength">Strong</strong>
+</div>
 </div>
 
 </div>
