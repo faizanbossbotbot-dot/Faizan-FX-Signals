@@ -1,18 +1,18 @@
-const API_KEY = "YAHAN_APNI_API_KEY_DALO";
+let livePrice = 0;
+let prices = [];
 
-async function getPrice(symbol = "EUR/USD") {
-    try {
-        const res = await fetch(
-            `https://api.twelvedata.com/price?symbol=${encodeURIComponent(symbol)}&apikey=${API_KEY}`
-        );
+const socket = new WebSocket(
+  "wss://stream.binance.com:9443/ws/btcusdt@trade"
+);
 
-        const data = await res.json();
+socket.onmessage = (event) => {
+  const data = JSON.parse(event.data);
 
-        if (data.price) {
-            document.getElementById("marketPrice").innerHTML =
-                "Live Price: " + data.price;
-        }
-    } catch (e) {
-        console.log(e);
-    }
-}
+  livePrice = parseFloat(data.p);
+  prices.push(livePrice);
+
+  if (prices.length > 100) prices.shift();
+
+  document.getElementById("marketPrice").innerText =
+    "📈 Live Price: " + livePrice.toFixed(2);
+};
