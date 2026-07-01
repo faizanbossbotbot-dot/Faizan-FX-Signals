@@ -43,7 +43,6 @@ Market Open
 </div>
 
 <div class="server-time">
-<p id="clock"></p>
 </div>
 
 </div>
@@ -69,13 +68,35 @@ Market Open
 
 <button onclick="generateSignal()">Generate Signal</button>
 
-<h2 id="signal">Waiting...</h2>
-<p id="confidence"></p>
+<h2 id="signal" class="signal-text">🟡 WAIT</h2>
+
+<div class="signal-info">
+
+<div class="info-box">
+<span>🎯 Confidence</span>
+<strong id="confidence">0%</strong>
+</div>
+
+<div class="info-box">
+<span>💰 Entry</span>
+<strong id="entry">----</strong>
+</div>
+
+<div class="info-box">
+<span>🛑 Stop Loss</span>
+<strong id="sl">----</strong>
+</div>
+
+<div class="info-box">
+<span>🎯 Take Profit</span>
+<strong id="tp">----</strong>
+</div>
+
+</div>
 
 </div>
 </div>
 
-<script src="script.js"></script>
 <div class="tradingview-widget-container">
   <iframe
     src="https://s.tradingview.com/widgetembed/?frameElementId=tradingview&symbol=FX:EURUSD&interval=1&hidesidetoolbar=1&theme=dark&style=1&timezone=Etc/UTC"
@@ -100,5 +121,8 @@ Market Open
 <footer>
 Faizan FX Signals © 2026
 </footer>
+
+  <script src="script.js"></script>
+  
 </body>
 </html>
