@@ -49,3 +49,37 @@ button:hover{
     margin-top:20px;
     font-size:28px;
 }
+ .top-bar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 40px;
+background:#111827;
+border-radius:15px;
+margin:20px;
+}
+
+.balance-box h2{
+color:#00ff88;
+font-size:30px;
+}
+
+.market-status{
+color:#fff;
+font-size:18px;
+}
+
+.dot{
+height:12px;
+width:12px;
+background:#00ff88;
+border-radius:50%;
+display:inline-block;
+margin-right:8px;
+box-shadow:0 0 10px #00ff88;
+}
+
+.server-time{
+color:white;
+font-size:18px;
+}
