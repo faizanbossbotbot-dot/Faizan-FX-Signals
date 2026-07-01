@@ -1,19 +1,21 @@
 function generateSignal() {
-    const signals = ["🟢 BUY", "🔴 SELL"];
-    const trends = ["Bullish 📈", "Bearish 📉", "Sideways ➖"];
+    const signals = ["🟢 CALL", "🔴 PUT"];
+    const strengths = ["Strong", "Very Strong", "Medium"];
+    const expiries = ["30 Seconds", "1 Minute", "5 Minutes"];
 
     const signal = signals[Math.floor(Math.random() * signals.length)];
-    const confidence = Math.floor(Math.random() * 16) + 85; // 85–100%
-    const trend = trends[Math.floor(Math.random() * trends.length)];
+    const confidence = Math.floor(Math.random() * 16) + 85;
+    const strength = strengths[Math.floor(Math.random() * strengths.length)];
+    const expiry = expiries[Math.floor(Math.random() * expiries.length)];
+
+    const asset = document.getElementById("pair").value;
 
     document.getElementById("signal").innerHTML = signal;
-    document.getElementById("confidence").innerHTML =
-        "Confidence: " + confidence + "%";
-}
-function updateClock(){
-const now=new Date();
-document.getElementById("clock").innerHTML=now.toLocaleTimeString();
-}
+    document.getElementById("confidence").innerHTML = confidence + "%";
+    document.getElementById("entry").innerHTML = expiry;
+    document.getElementById("asset").innerHTML = asset;
+    document.getElementById("strength").innerHTML = strength;
 
-setInterval(updateClock,1000);
-updateClock();
+    document.getElementById("signal").style.color =
+        signal.includes("CALL") ? "#00ff88" : "#ff4d4d";
+}
