@@ -2,7 +2,12 @@ body{
     margin:0;
     padding:0;
     font-family:Arial,sans-serif;
-    background:#0f172a;
+
+    background: 
+      radial-gradient(circle at 20% 20%, #1e3a8a 0%, transparent 40%),
+      radial-gradient(circle at 80% 30%, #0ea5e9 0%, transparent 40%),
+      radial-gradient(circle at 50% 80%, #111827 0%, #000000 70%);
+
     color:white;
 }
 
