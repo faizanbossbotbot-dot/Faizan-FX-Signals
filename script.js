@@ -1,5 +1,4 @@
 let candles = [];
-
 function updateCandle(price) {
   let last = candles[candles.length - 1];
 
