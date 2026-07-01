@@ -94,3 +94,11 @@ function bearishEngulfing(prev, curr) {
          curr.close < curr.open &&
          curr.open > prev.close;
 }
+setInterval(() => {
+  if (candles.length < 20) return;
+
+  let prev = candles[candles.length - 2];
+  let curr = candles[candles.length - 1];
+
+  generateSignal(prices, prev, curr);
+}, 2000);
